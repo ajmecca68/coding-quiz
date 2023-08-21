@@ -1,3 +1,5 @@
+//questions
+
 var questions = [
 {
 title: 'Commonly used data types DO NOT include:', 
@@ -22,14 +24,14 @@ answer: 'quotes',
 },
 { 
 title:
-'A very useful tool used during development and debugging for printing content to the debugger is:',
-choices: [ 'JavaScript', 'terminal / bash', 'for loops', 'console.log'],
-answer: 'console.log',
+'What is my favorite color?',
+choices: [ 'Atrovirens', 'Sarcoline', 'Feldgrau', 'Smaragdine'],
+answer: 'Feldgrau',
 },
 { 
 title:
-'What is your favorite color? (Yes these are actual colors)',
-choices: [ 'Atrovirens', 'Sarcoline', 'Feldgrau', 'smaragdine'],
-answer: 'Feldgrau',
+'What is the capital of Assyria?',
+choices: [ 'Damascus', 'Vadiz', 'Assur', 'Topeka'],
+answer: 'Assur',
 },
 ];

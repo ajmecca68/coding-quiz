@@ -1,8 +1,9 @@
+// set time and question variables
 var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
 
-
+// set the elements and button variables
 var startBtn = document.getElementById('startButton');
 var questionsEl = document.getElementById('questions');
 var timerEl = document.getElementById('timer');
@@ -11,30 +12,33 @@ var submitBtn = document.getElementById('submit');
 var initialsEl = document.getElementById('initials');
 var feedbackEl = document.getElementById('feedback');
 
+// set the initial timer to question length * 15.
 timerEl.innerHTML = time;
 
-
-
-
+// once start game is clicked it hides the start screen and begins the quiz and timer.
 function beginQuiz() {
     var startScreenEl = document.getElementById('start-screen');
     startScreenEl.setAttribute('class', 'hide');
     questionsEl.removeAttribute('class');
     timerId = setInterval(countdown, 1000);
     timerEl.textContent = time;
-
+//gets the next question from the function question
     getQuestion();
 }
 
 
 function getQuestion() {
+    //determine what the current question is
     var currentQuestion = questions[currentQuestionIndex];
 
+    // set the title of the question 
     var titleEl = document.getElementById('question-title');
     titleEl.textContent = currentQuestion.title;
     
+    // zero out the choices to begin
     choicesEl.innerHTML = '';
     
+    // creates choice buttons
     for (var i = 0; i < currentQuestion.choices.length; i++) {
         var choice = currentQuestion.choices[i];
         var choiceNode = document.createElement('button');
@@ -47,12 +51,13 @@ function getQuestion() {
     }
 }
 
+
 function questionClick(event) {
     var buttonEl = event.target;
     if (!buttonEl.matches('.choice')) {
         return;
     }
-    
+//checks if question was correct    
     if (buttonEl.value !== questions[currentQuestionIndex].answer){
         time -= 15;
         if(time < 0) {
@@ -82,8 +87,9 @@ function questionClick(event) {
         getQuestion();
      }
 }
-
+// ends quiz 
 function quizEnd() {
+    // clears timer
     clearInterval(timerId);
 
     var endscreenEl = document.getElementById('end-screen');
