@@ -7,20 +7,27 @@ header {
     padding-top: 20px;
 }
 
+h3 {
+    line-height: 1px;
+}
+
 body {
     background-color: bisque;
 }
 
 #wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     border: 2px solid black;
+    margin-top: 20px;
     border-radius: 10px;
-    margin: 30px;
     padding: 20px 20px 20px 20px;
 
 }
 
-#start-screen {
+#start-screen, #questions {
     margin: 0 auto;
     padding: 3px;
     max-width: 500px;
@@ -31,15 +38,16 @@ body {
     font-size: 25px;
 }
 
-#startButton, .choice {
+Button {
     background-color: rgb(8, 8, 119);
     color: white;
     width: 200px;
     height: 50px;
     border-radius: 10px;
+    margin: 10px;
 }
 
-#startButton:hover, .choice:hover {
+Button:hover {
     background-color: rgb(47, 47, 118);
     box-shadow: inset;
 }
@@ -47,4 +55,33 @@ body {
 .hide {
     display: none;
 }
+
+.feedback {
+    margin: 0 auto;
+    padding: 3px;
+    max-width: 500px;
+
+}
+
+li:nth-child(odd) {
+    background-color:coral;  
+}
+
+.scores {
+    align-items: center;
+}
+
+#highscores {
+    width: 500px;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+#highscores:empty {
+    border: none;
+}
+
+
+
+
 

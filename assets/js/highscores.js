@@ -1,5 +1,5 @@
 function printHighscores() {
-    var highscores = JSON.parse(window.localStorage.getItem('highscores')) || [];
+    var highscores = JSON.parse(window.localStorage.getItem('scores')) || [];
 
     highscores.sort(function (a, b) {
         return b.score - a.score;
@@ -7,15 +7,16 @@ function printHighscores() {
 
     for (var i = 0; i < highscores.length; i += 1) {
         var liTag = document.createElement('li');
-        liTag.textContent = highscores[i].initials + ' - ' + highscores[i].score;
+        liTag.textContent = highscores[i].score + ' ' + highscores[i].initials;
 
         var olEl = document.getElementById('highscores')
         olEl.appendChild(liTag);
     }
 }
 
+
 function clearHighscores() {
-    window.localStorage.removeItem('highscores');
+    window.localStorage.removeItem('scores');
     window.location.reload();
 }
 

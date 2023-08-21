@@ -23,12 +23,12 @@ answer: 'quotes',
 { 
 title:
 'A very useful tool used during development and debugging for printing content to the debugger is:',
-choices: [ 'JavaScript', 'terminal / bash', 'for loops', 'console. log'],
-answer: 'console. log',
+choices: [ 'JavaScript', 'terminal / bash', 'for loops', 'console.log'],
+answer: 'console.log',
 },
 { 
 title:
-'What is your favorite color?',
+'What is your favorite color? (Yes these are actual colors)',
 choices: [ 'Atrovirens', 'Sarcoline', 'Feldgrau', 'smaragdine'],
 answer: 'Feldgrau',
 },

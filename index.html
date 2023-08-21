@@ -17,20 +17,24 @@
 <div id="wrapper">
     <div id="start-screen" class="start">
         <p>When you click the "Start Game" button below the timer will start. When you have successfully answered all the questions the time left on the timer is your score. For every wrong answer, 15sec is deducted from the timer.</p>
+        <a href="highscores.html">Highscores</a><br>
         <button id="startButton">Start Game</button>
     </div>
 
     <div id="questions" class="hide">
         <h2 id="question-title"></h2>
-        <div id="choices" class="choice"></div>
+        <div id="choices" class="choices">
+        </div>
     </div>
     
     <div id="end-screen" class="hide">
         <h2>All Done!</h2>
-        <p>Enter Initials: <input type="text" id="initials" max="3" />
+        <p>Enter Initials: <input type="text" id="initials" max="3" /></p>
         <button id="submit">Submit</button>
-        </p>
+        
     </div>
+
+    <div id="feedback" class="feedback hide"></div>
 
 </div>
 
